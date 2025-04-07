@@ -2,9 +2,18 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("input n: ");
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++) 
+            {
+                string spaces = new string(' ', i);
+                string stars = new string('*', 2 * (n - i) - 1);
+                Console.WriteLine(spaces + stars);
+
+            }
         }
     }
 }
